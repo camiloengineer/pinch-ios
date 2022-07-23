@@ -21,11 +21,11 @@ struct InfoPanelView: View {
                 .symbolRenderingMode(.hierarchical)
                 .resizable()
                 .frame(width: 30, height: 30)
-                .onTapGesture(perform: {
+                .onLongPressGesture(minimumDuration: 0.5) {
                     withAnimation(.easeOut) {
                         isInfoPanelVisible.toggle()
                     }
-                })
+                }
             
             Spacer()
             
